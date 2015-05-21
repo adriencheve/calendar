@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+/* Global Style */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background: white;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(65, 65, 65);
+    font-size: medium;
+    font-weight: 400;
+    padding-top: 50px;
+}
+
+.secondary-font {
+    font-family: 'Titillium Web', 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+a:not([href]):hover,
+a:not([href]):focus {
+    cursor: pointer;
+    color: #337AB7;
+    text-decoration: none;
+}
+
+/* Header */
+.navbar-inverse {
+    background-color: #EEE;
+    border: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #555;
+    -webkit-transition: .3s all;
+    transition: .3s all;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #111;
+}
+
+.brand-img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-nav .fa {
+    margin-left: .5em;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    width: 100%;
+    background-color: #EEEEEE;
+    height: 50px;
+    line-height: 50px;
+    bottom: 0;
+}
+
+.footer .fa {
+    color: #555;
+}
+
+.footer .fa:not(.copyright) {
+    font-size: 1.4em;
+}
