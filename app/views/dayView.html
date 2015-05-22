@@ -1,0 +1,46 @@
+<section class="day-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <span class="btn btn-default margin-right-10" ng-click="jumpToToday()"
+                    ng-disabled="data.date.getDate() === data.today.getDate()">Today</span>
+                <div class="btn-group margin-right-10" role="group" aria-label="...">
+                    <span class="btn btn-default" ng-click="prevDate()">
+                        <i class="fa fa-arrow-left"></i>
+                    </span>
+                    <span class="btn btn-default" ng-click="nextDate()">
+                        <i class="fa fa-arrow-right"></i>
+                    </span>
+                </div>
+                <div class="btn-group pull-right" role="group" aria-label="...">
+                    <span class="btn btn-default active">Day</span>
+                    <span class="btn btn-default">Week</span>
+                    <span class="btn btn-default">Month</span>
+                    <span class="btn btn-default">Year</span>
+                </div>
+
+                <span>Date: {{data.date | date:'MM/dd/yyyy'}}</span>
+            </div>
+            <div class="events-container scrollable">
+                <div class="time">
+                    <div ng-repeat="(index, value) in data.hours" style="top: {{(value - 1) * 60}}px">
+                        <span>{{ value | hour }}</span>
+                    </div>
+                </div>
+                <div class="events">
+                    <!-- <div ng-repeat="(index, value) in data.hours" style="top: {{(value - 1) * 60}}px; height: 60px;">
+                        <span>Event {{value}}</span>
+                    </div> -->
+                    <div style="top: 120px; height: 195px;">
+                        <span>Event 01</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nemo facilis reiciendis.</p>
+                    </div>
+                    <div style="top: 400px; height: 210px;">
+                        <span>Event 02</span>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

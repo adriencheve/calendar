@@ -7,7 +7,7 @@
 
     function routeProvider ($routeProvider) {
         $routeProvider.when('/', {
-            templateUrl: 'app/views/homeView.html',
+            templateUrl: 'app/views/dayView.html',
             controller: 'DayController'
         }).otherwise({
             redirectTo: '/'
