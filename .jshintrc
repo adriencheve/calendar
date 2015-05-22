@@ -1,0 +1,23 @@
+{
+    "undef": true,
+    "unused": true,
+    "jasmine": true,
+    "globals": [
+        "jQuery",
+        "$",
+        "window",
+        "console",
+        "angular",
+        "jasmine",
+        "describe",
+        "xdescribe",
+        "before",
+        "beforeEach",
+        "after",
+        "afterEach",
+        "it",
+        "inject",
+        "expect",
+        "module"
+    ]
+}
