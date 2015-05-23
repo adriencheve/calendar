@@ -3,7 +3,7 @@
 
     var app = angular.module('SCWebApp');
 
-    // Convert number into hour format
+    // Converts number into hour format
     app.filter('hour', function() {
         return function(number) {
             var hour = number % 12;
@@ -14,6 +14,9 @@
         };
     });
 
+    // Creates array for a specified range
+    // e.g.
+    // <div ng-repeat="hour in [] | range:24">
     app.filter('range', function() {
         return function(input, total) {
             total = parseInt(total);
