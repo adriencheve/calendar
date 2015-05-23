@@ -23,8 +23,9 @@
             </div>
             <div class="events-container scrollable">
                 <div class="time">
-                    <div ng-repeat="(index, value) in data.hours" style="top: {{(value - 1) * 60}}px">
-                        <span>{{ value | hour }}</span>
+                    <div ng-repeat="hour in [] | range:24" style="top: {{hour * 60}}px">
+                        <span>{{ hour + 1 | hour }}</span>
+                        <!-- 'hour + 1' because we are starting with 1 AM not 12 AM -->
                     </div>
                 </div>
                 <div class="events">
