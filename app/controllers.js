@@ -6,17 +6,17 @@
 
     function DayController ($scope, Data) {
         $scope.init = function() {
-            // var data = Data.getEvents();
+            Data.getAllEvents().success(function(data) {
+                // console.log(data);
 
-            // console.log(data);
+                $scope.data = {};
 
-            $scope.data = {};
+                $scope.data.today = new Date();
+                $scope.data.date = new Date();
 
-            $scope.data.today = new Date();
-            $scope.data.date = new Date();
-
-            $scope.$watch('data.date', function() {
-                $scope.updateEvents();
+                $scope.$watch('data.date', function() {
+                    $scope.updateEvents();
+                });
             });
         };
 
